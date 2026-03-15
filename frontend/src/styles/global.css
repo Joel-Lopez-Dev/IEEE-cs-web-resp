@@ -1,0 +1,130 @@
+/* ========== Variables globales ========== */
+:root {
+  --color-blue-dark: #005A87;
+  --color-blue-medium: #0077B6;
+  --color-blue-light: #009FE3;
+  --color-orange: #E89005;
+  --color-white: #FFFFFF;
+  --color-black: #1A1A1A;
+  --color-gray-light: #F5F5F5;
+  --color-gray-text: #555555;
+  --color-border: #e0e0e0;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* ========== Tema oscuro ========== */
+[data-theme="dark"] {
+  --color-white: #121212;
+  --color-black: #E8E8E8;
+  --color-gray-light: #1E1E1E;
+  --color-gray-text: #A0A0A0;
+  --color-border: #333333;
+  --color-blue-medium: #0088CC;
+}
+
+/* ========== Reset básico ========== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+/* ========== Contenedor reutilizable ========== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ========== Sección genérica ========== */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-gray-text);
+  margin-bottom: 40px;
+}
+
+/* ========== Botones ========== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+[data-theme="dark"] .btn-dark {
+  background-color: #E8E8E8;
+  color: #121212;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+}
+
+.btn-orange {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+/* ========== Responsive helpers ========== */
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
