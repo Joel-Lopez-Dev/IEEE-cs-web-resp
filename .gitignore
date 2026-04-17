@@ -20,3 +20,7 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Image assets (public)
+/frontend/public/img/
+/public/img/
