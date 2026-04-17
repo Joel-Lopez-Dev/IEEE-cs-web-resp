@@ -1,8 +1,9 @@
 import './Membership.css'
+import AnimatedSection from '../AnimatedSection/AnimatedSection'
 
 export default function Membership() {
   return (
-    <section id="membresia" className="membership section">
+    <AnimatedSection id="membresia" className="membership">
       <div className="container">
         <p className="membership-label">Membresía</p>
         <h2 className="section-title">
@@ -32,10 +33,24 @@ export default function Membership() {
         </div>
 
         <div className="membership-actions">
-          <a href="#" className="btn btn-dark">Unirte</a>
-          <a href="#areas" className="btn btn-outline">Aprende más →</a>
+          <a 
+            href="https://youtu.be/mng2A1HgLUc"
+            className="btn btn-dark"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tutorial
+          </a>
+          <a
+            href="https://www.ieee.org/membership/renew"
+            className="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Dónde comprar
+          </a>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }

@@ -1,0 +1,53 @@
+.team {
+  background: linear-gradient(180deg, rgba(15, 92, 139, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  scroll-margin-top: 5.4rem;
+}
+
+.team-label {
+  color: var(--color-brand-700);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  font-size: 0.78rem;
+}
+
+.team-image-wrapper {
+  margin: 2.4rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(11, 39, 67, 0.15);
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team-description {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.68;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+[data-theme='dark'] .team {
+  background: linear-gradient(180deg, rgba(140, 185, 218, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+[data-theme='dark'] .team-image-wrapper {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+  .team {
+    scroll-margin-top: 4.8rem;
+  }
+
+  .team-description {
+    font-size: 1rem;
+  }
+}

@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import './FAQ.css'
+import AnimatedSection from '../AnimatedSection/AnimatedSection'
 
 const QUESTIONS = [
   {
     question: '¿Qué es la IEEE?',
     answer:
-      'La IEEE Computer Society (UNAM) es una sociedad estudiantil dedicada a la promoción de las ciencias de la computación. Nuestro objetivo es crear un entorno propicio para el desarrollo profesional y académico. Fomentamos el aprendizaje, la colaboración y la innovación entre estudiantes de ciencias de la computación y carreras afines.',
+      'La IEEE Computer Society (UNAM) es una sociedad estudiantil dedicada a la promoción de la computación. Nuestro objetivo es crear un entorno propicio para el desarrollo profesional y académico. Fomentamos el aprendizaje, la colaboración y la innovación entre estudiantes de ciencias de la computación y carreras afines.',
   },
   {
     question: '¿Cómo puedo unirme?',
     answer:
-      'Unirte es fácil. Solo necesitas llenar nuestro formulario de inscripción disponible en la sección "Unirte". Ahí te pedirán algunos datos personales sobre tu carrera y semestre.',
+      'Únete es fácil. Solo necesitas llenar nuestro formulario de inscripción disponible en la sección "Únete". Ahí te pedirán algunos datos personales sobre tu carrera y semestre.',
   },
   {
     question: '¿Cuáles son los beneficios?',
@@ -18,14 +19,14 @@ const QUESTIONS = [
       'Los miembros disfrutan de acceso exclusivo a talleres, conferencias y proyectos. Además, tendrás la oportunidad de conectar con profesionales del sector. Nuestro programa también incluye mentorías y recursos exclusivos de aprendizaje.',
   },
   {
-    question: '¿Qué tipo de eventos?',
+    question: '¿Qué tipo de eventos organizan?',
     answer:
       'Organizamos talleres, charlas y hackatones a lo largo del año. Estos eventos están diseñados para mejorar tus habilidades y actualizarte en las últimas tendencias tecnológicas. También ofrecemos oportunidades para que los estudiantes presenten sus propios proyectos.',
   },
   {
     question: '¿Dónde se encuentran?',
     answer:
-      'Nuestra sede es en la Universidad Nacional Autónoma de México. Puedes encontrarnos en el edificio de ciencias de la computación. También estamos activos en redes sociales donde compartimos novedades y eventos.',
+      'Nuestra sede es en la Universidad Nacional Autónoma de México. También estamos activos en redes sociales donde compartimos novedades y eventos.',
   },
 ]
 
@@ -37,7 +38,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="faq section">
+    <AnimatedSection id="faq" className="faq">
       <div className="container">
         <h2 className="section-title">Preguntas</h2>
         <p className="section-subtitle">
@@ -51,18 +52,22 @@ export default function FAQ() {
               className={`faq-item ${openIndex === index ? 'faq-item--open' : ''}`}
             >
               <button
+                type="button"
                 className="faq-question"
                 onClick={() => toggle(index)}
                 aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
               >
                 <span>{item.question}</span>
                 <span className="faq-icon">{openIndex === index ? '−' : '+'}</span>
               </button>
-              {openIndex === index && (
-                <div className="faq-answer">
-                  <p>{item.answer}</p>
-                </div>
-              )}
+              <div
+                id={`faq-answer-${index}`}
+                className="faq-answer"
+                aria-hidden={openIndex !== index}
+              >
+                <p>{item.answer}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -73,6 +78,6 @@ export default function FAQ() {
           <a href="#" className="btn btn-orange">Contacto</a>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }

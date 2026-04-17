@@ -1,54 +1,61 @@
 .membership {
-  background-color: var(--color-gray-light);
+  background: linear-gradient(180deg, #edf4fb 0%, #f8fbff 100%);
+  scroll-margin-top: 5.8rem;
 }
 
 .membership-label {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--color-gray-text);
-  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+  color: #235c8a;
+  margin-bottom: 0.55rem;
 }
 
 .membership-desc {
-  max-width: 640px;
+  max-width: 740px;
 }
 
 .membership-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-bottom: 32px;
+  gap: 1rem;
+  margin-bottom: 1.7rem;
 }
 
 .membership-card {
-  background-color: var(--color-white);
-  border-radius: 8px;
-  padding: 28px 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 1.35rem 1.1rem;
   border: 1px solid var(--color-border);
-  transition: background-color 0.3s;
+  box-shadow: var(--shadow-soft);
 }
 
 .membership-card-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 0.45rem;
+  color: var(--color-brand-900);
 }
 
 .membership-card-desc {
   font-size: 0.95rem;
-  color: var(--color-gray-text);
+  color: var(--color-text);
   line-height: 1.6;
 }
 
 .membership-actions {
   display: flex;
-  gap: 16px;
+  gap: 0.75rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
+  .membership {
+    scroll-margin-top: 5.1rem;
+  }
+
   .membership-grid {
     grid-template-columns: 1fr;
   }

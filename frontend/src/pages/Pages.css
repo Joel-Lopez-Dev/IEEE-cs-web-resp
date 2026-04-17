@@ -1,0 +1,345 @@
+.page-shell {
+  background: linear-gradient(180deg, rgba(12, 69, 112, 0.06) 0%, rgba(242, 145, 0, 0.06) 100%);
+  min-height: 58vh;
+}
+
+.page-label {
+  color: var(--color-brand-700);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  font-size: 0.78rem;
+}
+
+.page-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.page-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.page-card h2 {
+  font-size: 1.18rem;
+  color: var(--color-brand-900);
+}
+
+.page-card p {
+  color: var(--color-text);
+}
+
+.xtreme-list {
+  max-width: 920px;
+  margin: 1.35rem auto 0;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.xtreme-top-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.55rem;
+}
+
+.xtreme-item {
+  padding: 1.5rem 0 1.65rem;
+  border-bottom: 1px solid var(--color-border);
+  opacity: 0;
+  transform: translateY(14px);
+  animation: projectCardEnter 0.56s ease forwards;
+  text-align: center;
+}
+
+.xtreme-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.xtreme-item:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.xtreme-item:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.xtreme-item-title {
+  font-size: clamp(1.55rem, 2.3vw, 2rem);
+  color: var(--color-brand-900);
+  line-height: 1.15;
+  margin-bottom: 0.62rem;
+}
+
+.xtreme-carousel {
+  margin: 0.7rem 0 0.95rem;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 16px 40px rgba(11, 39, 67, 0.12);
+}
+
+.xtreme-carousel-track {
+  display: flex;
+  transition: transform 0.9s ease;
+}
+
+.xtreme-carousel-image {
+  width: 100%;
+  max-height: 520px;
+  min-height: 300px;
+  object-fit: cover;
+  display: block;
+  flex: 0 0 100%;
+}
+
+.xtreme-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.65rem 0 0.72rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.xtreme-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(15, 92, 139, 0.28);
+}
+
+.xtreme-carousel-dot--active {
+  width: 22px;
+  background: var(--color-brand-700);
+}
+
+.xtreme-sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.7rem 0 0.95rem;
+}
+
+.xtreme-sponsor-card {
+  min-width: 180px;
+  min-height: 110px;
+  padding: 0.95rem 1.05rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xtreme-sponsor-logo {
+  max-width: 170px;
+  max-height: 64px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.xtreme-sponsor-logo--dark {
+  display: none;
+}
+
+.xtreme-item-description {
+  margin: 0;
+  max-width: 74ch;
+  margin-inline: auto;
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 1.02rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.projects-list {
+  display: grid;
+  gap: 1.3rem;
+  max-width: 980px;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 172px minmax(0, 1fr);
+  align-items: center;
+  gap: 1.15rem;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: projectCardEnter 0.62s ease forwards;
+}
+
+.project-row:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.project-row:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.project-image-placeholder {
+  width: 172px;
+  height: 172px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(15, 92, 139, 0.12), rgba(242, 145, 0, 0.22));
+  border: 1px solid rgba(15, 92, 139, 0.25);
+  flex-shrink: 0;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card-content {
+  display: grid;
+  align-content: center;
+  gap: 0.75rem;
+  min-height: 172px;
+  padding: 1.45rem 1.35rem;
+}
+
+.project-card-content h2 {
+  font-size: 1.14rem;
+}
+
+.project-card-content p {
+  max-width: 62ch;
+}
+
+.project-btn {
+  justify-self: flex-start;
+}
+
+@keyframes projectCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-row {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .xtreme-item {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .xtreme-carousel-track {
+    transition: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .project-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .project-image-placeholder {
+    width: 146px;
+    height: 146px;
+    font-size: 1.08rem;
+  }
+
+  .project-card-content {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .project-btn {
+    justify-self: center;
+  }
+
+}
+
+[data-theme='dark'] .page-shell {
+  background: linear-gradient(180deg, rgba(129, 177, 216, 0.06) 0%, rgba(242, 169, 59, 0.07) 100%);
+}
+
+[data-theme='dark'] .page-card h2 {
+  color: var(--color-ink);
+}
+
+[data-theme='dark'] .xtreme-item h2 {
+  color: var(--color-ink);
+}
+
+[data-theme='dark'] .xtreme-carousel {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.36);
+}
+
+[data-theme='dark'] .xtreme-sponsor-card {
+  background: rgba(6, 21, 35, 0.7);
+}
+
+[data-theme='dark'] .xtreme-sponsor-logo--light {
+  display: none;
+}
+
+[data-theme='dark'] .xtreme-sponsor-logo--dark {
+  display: block;
+}
+
+[data-theme='dark'] .xtreme-carousel-dots {
+  background: rgba(6, 21, 35, 0.88);
+}
+
+[data-theme='dark'] .xtreme-carousel-dot {
+  background: rgba(140, 185, 218, 0.35);
+}
+
+[data-theme='dark'] .xtreme-carousel-dot--active {
+  background: #f2a93b;
+}
+
+@media (max-width: 760px) {
+  .xtreme-item {
+    text-align: left;
+  }
+
+  .xtreme-carousel-image {
+    max-height: 340px;
+    min-height: 200px;
+  }
+
+  .xtreme-item-description {
+    margin-inline: 0;
+  }
+
+  .xtreme-sponsor-card {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+[data-theme='dark'] .project-image-placeholder {
+  border-color: rgba(140, 185, 218, 0.35);
+  background: linear-gradient(145deg, rgba(140, 185, 218, 0.2), rgba(242, 169, 59, 0.2));
+}
